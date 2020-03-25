@@ -1,20 +1,15 @@
 import React from 'react';
-import {SafeAreaView, ScrollView, View, Text, StatusBar} from 'react-native';
 import {styles} from './styles';
+import {outerInset} from './navigation/sceneConfig';
+import {SceneContainer} from '../../components/SceneContainer';
+import {Layout} from './Layout';
+import {useRenderItem} from './hooks/useRenderItem';
 
 export const HomeScreen = () => {
+  const {renderItem} = useRenderItem();
   return (
-    <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
-          <View style={styles.body}>
-            <Text>Home Screen</Text>
-          </View>
-        </ScrollView>
-      </SafeAreaView>
-    </>
+    <SceneContainer forceInset={outerInset} style={styles.noPadding}>
+      <Layout renderItem={renderItem} />
+    </SceneContainer>
   );
 };
