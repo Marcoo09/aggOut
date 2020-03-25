@@ -5,10 +5,10 @@ import {AppModule} from './app.module';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   const options = new DocumentBuilder()
-    .setTitle('YoDono')
-    .setDescription('The YoDono API description')
+    .setTitle('aggOut')
+    .setDescription('The aggOut API description')
     .setVersion('0.1')
-    .addTag('YoDono')
+    .addTag('aggOut')
     .build();
   const document = SwaggerModule.createDocument(app, options);
   SwaggerModule.setup('api', app, document);

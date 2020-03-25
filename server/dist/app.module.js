@@ -13,12 +13,20 @@ const typeorm_1 = require("@nestjs/typeorm");
 const pokemon_module_1 = require("./pokemon/pokemon.module");
 const auth_module_1 = require("./auth/auth.module");
 const users_module_1 = require("./users/users.module");
+const neighborhood_module_1 = require("./neighborhood/neighborhood.module");
+const neighborhood_controller_1 = require("./neighborhood/neighborhood.controller");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
     common_1.Module({
-        imports: [typeorm_1.TypeOrmModule.forRoot(), pokemon_module_1.PokemonModule, auth_module_1.AuthModule, users_module_1.UsersModule],
-        controllers: [app_controller_1.AppController],
+        imports: [
+            typeorm_1.TypeOrmModule.forRoot(),
+            pokemon_module_1.PokemonModule,
+            auth_module_1.AuthModule,
+            users_module_1.UsersModule,
+            neighborhood_module_1.NeighborhoodModule,
+        ],
+        controllers: [app_controller_1.AppController, neighborhood_controller_1.NeighborhoodController],
         providers: [app_service_1.AppService],
     })
 ], AppModule);
