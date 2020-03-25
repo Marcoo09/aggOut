@@ -6,10 +6,10 @@ const app_module_1 = require("./app.module");
 async function bootstrap() {
     const app = await core_1.NestFactory.create(app_module_1.AppModule);
     const options = new swagger_1.DocumentBuilder()
-        .setTitle('YoDono')
-        .setDescription('The YoDono API description')
+        .setTitle('aggOut')
+        .setDescription('The aggOut API description')
         .setVersion('0.1')
-        .addTag('YoDono')
+        .addTag('aggOut')
         .build();
     const document = swagger_1.SwaggerModule.createDocument(app, options);
     swagger_1.SwaggerModule.setup('api', app, document);

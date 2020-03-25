@@ -2545,8 +2545,24 @@
         "version": "0fbd3af0059c2c39e56a61b86c16578800e3ee7d294e29fd6effeb418a385a10",
         "signature": "a28b5c0c372fb375910b3fe3c3ce4331509bc18ccef7cc39c9ee9d8daf8225d1"
       },
+      "../src/neighborhood/neighborhood.entity.ts": {
+        "version": "63cd522424603af209be21f35edd2cd528f31bb38c11e9114bd98d56fe59ab70",
+        "signature": "ed4f25efebaefe469e1b6216af47cb4c12f00505e6da647de863cd10a1c5e2a4"
+      },
+      "../src/neighborhood/neighborhood.service.ts": {
+        "version": "0b1ff95e78b2e349d554ee479334aae6a5370a4924fad0f64a13279ff9bc9a12",
+        "signature": "205ebc8dd602853b5f0822c5ddf0341637c54872c05e9221f669d755bbd17bdc"
+      },
+      "../src/neighborhood/neighborhood.module.ts": {
+        "version": "e7d4f0ffd2a70723d0546adc60f00fe0ccbb62a227619fe5772e9a7334a99e54",
+        "signature": "703e1f923f6ae6bb290b5ffab5db9d578af8253c51ec0c22f5b7a3ca3d95ee32"
+      },
+      "../src/neighborhood/neighborhood.controller.ts": {
+        "version": "73c6e709f96d77cbfbcbba67888f380aa8a9813b64087a18c48c7d301216e288",
+        "signature": "ec5733fbb3a6546b497bd0ecb766dce88d8f0a5f8a87a068e74ac39ff87e6ac1"
+      },
       "../src/app.module.ts": {
-        "version": "24d6ea54a21ba04e954416ec4cce6d149a1a94f57066bb0f58562f1ad66c62f4",
+        "version": "a9a0fd16222ad59d4b6c0f8aaf8dcd33f4a4525dc75865c63bb83ae3c2ebfafc",
         "signature": "b82491e2990291580288c5602d4c017238977749d52b17391f0e45d9a29be644"
       },
       "../node_modules/@nestjs/core/adapters/http-adapter.d.ts": {
@@ -2810,7 +2826,7 @@
         "signature": "8f1241f5d9f0d3d72117768b3c974e462840fbd85026fb66685078945404cf2f"
       },
       "../src/main.ts": {
-        "version": "23b73f13ef6db89b7e5ea27c17a8a53da4734d309d9b653aecbc823fb5ddf6b0",
+        "version": "11a6ae5f4694b25e4ab56c2c1c79969207a420c8bb8d09452461e27ff06f739b",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
       },
       "../node_modules/@types/anymatch/index.d.ts": {
@@ -8250,6 +8266,42 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "../src/neighborhood/neighborhood.entity.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/neighborhood/neighborhood.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/neighborhood/neighborhood.entity.ts",
+        "../node_modules/@nestjs/typeorm/index.d.ts",
+        "../node_modules/typeorm/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/neighborhood/neighborhood.module.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/neighborhood/neighborhood.service.ts",
+        "../node_modules/@nestjs/typeorm/index.d.ts",
+        "../src/neighborhood/neighborhood.entity.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/neighborhood/neighborhood.controller.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/neighborhood/neighborhood.service.ts",
+        "../src/neighborhood/neighborhood.entity.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "../src/app.module.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/app.controller.ts",
@@ -8258,6 +8310,8 @@
         "../src/pokemon/pokemon.module.ts",
         "../src/auth/auth.module.ts",
         "../src/users/users.module.ts",
+        "../src/neighborhood/neighborhood.module.ts",
+        "../src/neighborhood/neighborhood.controller.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -14212,6 +14266,14 @@
         "../src/auth/auth.service.ts",
         "../src/users/user.entity.ts"
       ],
+      "../src/neighborhood/neighborhood.service.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../src/neighborhood/neighborhood.entity.ts"
+      ],
+      "../src/neighborhood/neighborhood.controller.ts": [
+        "../src/neighborhood/neighborhood.service.ts",
+        "../src/neighborhood/neighborhood.entity.ts"
+      ],
       "../node_modules/@nestjs/core/adapters/http-adapter.d.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/common/interfaces/index.d.ts",
@@ -15630,7 +15692,6 @@
       "../node_modules/@types/passport-jwt/index.d.ts",
       "../src/auth/jwt.strategy.ts",
       "../src/auth/auth.controller.ts",
-      "../src/app.module.ts",
       "../node_modules/@nestjs/core/adapters/http-adapter.d.ts",
       "../node_modules/@nestjs/core/adapters/index.d.ts",
       "../node_modules/@nestjs/core/injector/module-token-factory.d.ts",
