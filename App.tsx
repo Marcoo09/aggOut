@@ -6,14 +6,6 @@ import {HomeScreen} from './src/scenes/home';
 import {RootStack} from './src/navigation/RootStack';
 import {Palette} from './src/style/Palette';
 
-// function HomeScreen() {
-//   return (
-//     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-//       <Text>Home Screen</Text>
-//     </View>
-//   );
-// }
-
 const screenOptions = {
   headerStyle: {
     backgroundColor: Palette.clearBlue,
