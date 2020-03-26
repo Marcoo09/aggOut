@@ -1,8 +1,9 @@
 import {Action} from 'redux';
 import {ThunkAction} from 'redux-thunk';
+import {INeighborhoodController} from 'src/networking/controllers/neighborhood';
 
 export interface ExtraArguments {
-  // authController: IAuthController;
+  neighborhoodController: INeighborhoodController;
 }
 
 export interface ReduxStore {

@@ -5,7 +5,7 @@ import thunk from 'redux-thunk';
 import {ExtraArguments} from './types';
 import rootReducer from './rootReducer';
 import {AsyncStorage} from 'react-native';
-// import AuthController from '../networking/controllers/auth';
+import NeighborhoodController from '../networking/controllers/neighborhood';
 
 const composeEnhancers = composeWithDevTools({}) || compose;
 
@@ -17,7 +17,7 @@ const persistConfig = {
 const persistedReducer = persistReducer(persistConfig, rootReducer) as any;
 
 const extraArgs: ExtraArguments = {
-  //   authController: AuthController,
+  neighborhoddController: NeighborhoodController,
 };
 const middleware = composeEnhancers(
   applyMiddleware(thunk.withExtraArgument(extraArgs)),
