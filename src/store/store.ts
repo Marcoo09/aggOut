@@ -17,7 +17,7 @@ const persistConfig = {
 const persistedReducer = persistReducer(persistConfig, rootReducer) as any;
 
 const extraArgs: ExtraArguments = {
-  NeighborhoodController: NeighborhoodController,
+  neighborhoddController: NeighborhoodController,
 };
 const middleware = composeEnhancers(
   applyMiddleware(thunk.withExtraArgument(extraArgs)),
