@@ -1,34 +1,15 @@
-// import {AxiosPromise} from 'axios';
-// import HttpService from '../HttpService';
-// import {AuthEndpoints} from '../endpoints';
-// import {UserModel} from '../../types/User/user';
+import {AxiosPromise} from 'axios';
+import HttpService from '../HttpService';
+import {NeighborhoodEndpoints} from '../endpoints';
 
-// export interface IAuthController {
-//   createAccount(user: UserModel): AxiosPromise<any>;
-//   login(email: string, password: string): AxiosPromise<any>;
-//   getProfile(): AxiosPromise<any>;
-// }
+export interface INeighborhoodController {
+  getNeighborhoods(): AxiosPromise<any>;
+}
 
-// class AuthController implements IAuthController {
-//   createAccount(user: UserModel): AxiosPromise<any> {
-//     const config = {
-//       headers: {
-//         'content-type': 'application/json',
-//       },
-//     };
-//     return HttpService.post(AuthEndpoints.CREATE_ACCOUNT, user, config);
-//   }
-//   login(email: string, password: string): AxiosPromise<any> {
-//     const config = {
-//       headers: {
-//         'content-type': 'application/json',
-//       },
-//     };
-//     return HttpService.post(AuthEndpoints.LOGIN, {email, password}, config);
-//   }
-//   getProfile(): AxiosPromise<any> {
-//     return HttpService.get(AuthEndpoints.PROFILE);
-//   }
-// }
+class NeighborhoodController implements INeighborhoodController {
+  getNeighborhoods(): AxiosPromise<any> {
+    return HttpService.get(NeighborhoodEndpoints.GET_NEIGHBORHOOD);
+  }
+}
 
-// export default new AuthController();
+export default new NeighborhoodController();
