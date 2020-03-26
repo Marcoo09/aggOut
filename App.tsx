@@ -1,10 +1,11 @@
 import 'react-native-gesture-handler';
 import * as React from 'react';
-import {View, Text} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {HomeScreen} from './src/scenes/home';
 import {RootStack} from './src/navigation/RootStack';
 import {Palette} from './src/style/Palette';
+import {Provider} from 'react-redux';
+import {store} from './src/store/store';
 
 const screenOptions = {
   headerStyle: {
@@ -15,11 +16,13 @@ const screenOptions = {
 
 const App = () => {
   return (
-    <NavigationContainer>
-      <RootStack.Navigator mode="modal" screenOptions={screenOptions}>
-        <RootStack.Screen name="Home" component={HomeScreen} />
-      </RootStack.Navigator>
-    </NavigationContainer>
+    <Provider store={store}>
+      <NavigationContainer>
+        <RootStack.Navigator mode="modal" screenOptions={screenOptions}>
+          <RootStack.Screen name="Home" component={HomeScreen} />
+        </RootStack.Navigator>
+      </NavigationContainer>
+    </Provider>
   );
 };
 
